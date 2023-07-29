@@ -71,55 +71,20 @@ if (m == 1||m == 3||m == 5||m == 7||m == 8||m == 10||m == 12){
     int i;
     i = 7-d;
     int nuber = 1;
+    int n = 0;
     for(int abc = 7-i;0 < abc;abc--){
-        cout << "     ";
-    }
-    for (int abc = 0;i > abc;abc++){
-        ;
-        cout << nuber;
-        cout << "   ";
-        nuber++;
-    }
-    cout << endl;
-    for (int abc = 0;7 > abc;abc++){
-        cout << nuber;
-        cout << "   ";
-        nuber++;
-    }
-    cout << endl;
-    for (int abc = 0;7 > abc;abc++){
-        cout << nuber;
-        cout << " ";
-        nuber++;
-    }
-    cout << endl;
-    for (int abc = 0;7 > abc;abc++){
-        cout << nuber;
-        cout << " ";
-        nuber++;
+        cout << "  ";
     }
 
-
-    cout << endl;
-    for (int abc = 0;md-nuber >= 0&&abc < 7 ;abc++){
-        cout << nuber;
-        cout << " ";
+    for (int abc = 0;md > abc;abc++){
+        cout << nuber << " ";
+        n++;
         nuber++;
 
-}
-    cout << endl;
-    for (int abc = 0;md-nuber >= 0&&abc < 7 ;abc++){
-        cout << nuber;
-        cout << " ";
-        nuber++;
-
-
-}
-    cout << endl;
-    for (int abc = 0;md-nuber >= 0&&abc < 7 ;abc++){
-        cout << nuber;
-        cout << " ";
-        nuber++;
+        if (n == 7){
+            cout << endl;
+            n = 0;
+        }
     }
     return 0;
 }
