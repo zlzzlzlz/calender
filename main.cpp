@@ -13,8 +13,7 @@ int main()
 //read_text
 
     clog << "[IM]read_text:calender.in" << endl;
-    ifstream  calender;
-    calender.open(".\\calender\\calender.in");
+    ifstream  calender(".\\calender\\calender.in");
     if (!calender){
             system("color 0C");
             cerr << "[Emergncy]merrer:cannot open the file";
@@ -71,7 +70,6 @@ if (m == 1||m == 3||m == 5||m == 7||m == 8||m == 10||m == 12){
 
 
     fstream calenderout(".\\calender\\calender.out");
-   // calenderout.open(".\\calender\\calender.out");
     clog << "[IM]print_start" << endl;
     int i;
     i = 7-d;
