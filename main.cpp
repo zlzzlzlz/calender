@@ -27,6 +27,7 @@ int main()
     clog << "[DB]y" << y <<"m" << m << "d" << d <<endl;
     bool yi = 0;
     int md = 30;
+    calender.close();
 
 //----------------------------------------------------------------------
 //leep_common_year
@@ -66,26 +67,29 @@ if (m == 1||m == 3||m == 5||m == 7||m == 8||m == 10||m == 12){
 //----------------------------------------------------------------------
 //out_calender
 
-    freopen(".\\calender\\calender.out", "w", stdout);
+
+    fstream calenderout;
+    calenderout.open(".\\calender\\calender.out",ios::app);
     clog << "[IM]print_start" << endl;
     int i;
     i = 7-d;
     int nuber = 1;
     int n = 0;
     for(int abc = 7-i;0 < abc;abc--){
-        cout << "  ";
+        calenderout << "  ";
     }
 
     for (int abc = 0;md > abc;abc++){
-        cout << nuber << " ";
+        calenderout << nuber << " ";
         n++;
         nuber++;
 
         if (n == 7){
-            cout << endl;
+            calenderout << endl;
             n = 0;
         }
     }
+    calenderout.close();
     return 0;
 }
 
