@@ -2,6 +2,7 @@
 #include <fstream>
 #include<windows.h>
 #include<stdio.h>
+#include<iomanip>
 
 using namespace std;
 
@@ -24,6 +25,7 @@ int main()
     int m;
     int d;
     calender >> y >> m >> d;
+    d--;
     clog << "[DB]y" << y <<"m" << m << "d" << d <<endl;
     bool yi = 0;
     int md = 30;
@@ -68,23 +70,23 @@ if (m == 1||m == 3||m == 5||m == 7||m == 8||m == 10||m == 12){
 //out_calender
 
 
-    fstream calenderout;
-    calenderout.open(".\\calender\\calender.out",ios::app);
+    fstream calenderout(".\\calender\\calender.out");
+   // calenderout.open(".\\calender\\calender.out");
     clog << "[IM]print_start" << endl;
     int i;
     i = 7-d;
     int nuber = 1;
     int n = 0;
     for(int abc = 7-i;0 < abc;abc--){
-        calenderout << "  ";
+        calenderout << "   ";
+        n++;
     }
 
-    for (int abc = 0;md > abc;abc++){
-        calenderout << nuber << " ";
+    for ( ; nuber <= md; nuber++){
+        calenderout << setw(2) << nuber << " ";
         n++;
-        nuber++;
 
-        if (n == 7){
+        if (n >= 7){
             calenderout << endl;
             n = 0;
         }
